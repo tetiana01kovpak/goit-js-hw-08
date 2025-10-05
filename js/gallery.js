@@ -91,7 +91,7 @@ gallery.addEventListener('click', e => {
 
   const largeImageSrc = e.target.dataset.source;
 
-  console.log('Clicked image source:', largeImageSrc);
+  console.log('Clicked image:', largeImageSrc);
 });
 
 gallery.addEventListener('click', event => {
