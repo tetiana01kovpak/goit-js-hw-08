@@ -85,21 +85,14 @@ const markup = images
 
 gallery.insertAdjacentHTML('beforeend', markup);
 
-gallery.addEventListener('click', e => {
-  if (e.target.tagName !== 'IMG') return;
-  e.preventDefault();
-
-  const largeImageSrc = e.target.dataset.source;
-
-  console.log('Clicked image:', largeImageSrc);
-});
-
 gallery.addEventListener('click', event => {
   if (event.target.nodeName !== 'IMG') return;
 
   event.preventDefault();
 
   const largeImageURL = event.target.dataset.source;
+
+  console.log('Clicked image:', largeImageURL);
 
   const instance = basicLightbox.create(`
     <img src="${largeImageURL}" alt="${event.target.alt}" />
